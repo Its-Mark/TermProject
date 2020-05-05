@@ -3,13 +3,13 @@ import java.util.ArrayList;
 public class RoachMotel {
     private static RoachMotel instance = null;
     private static final int NUM_ROOMS = 10;
-    private Room[] rooms;
+    private ArrayList<Room> rooms;
 
     /**
      * Creates Roach Motel
      */
     private RoachMotel(){
-        rooms = new Room[NUM_ROOMS];
+        rooms = new ArrayList<>(NUM_ROOMS);
     }
 
     /**
@@ -28,7 +28,11 @@ public class RoachMotel {
      * @return
      */
     public boolean isVacant(){
-        return rooms.length < NUM_ROOMS;
+        return rooms.size() < NUM_ROOMS;
+    }
+
+    public void checkIn(RoachColony rc, String roomType, String[] amenities){
+
     }
 
 
