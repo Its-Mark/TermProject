@@ -1,6 +1,7 @@
 public abstract class Room {
     protected RoachColony roomColony;
     protected int totalNights;
+    protected String description;
 
     /**
      * Getter Method for number of nights
@@ -11,10 +12,10 @@ public abstract class Room {
     }
 
     /**
-     * Setter Method to increase nights stayed
+     * Setter Method to increase nights stayed by "n"
      */
-    public void increaseTotalNights(){
-        this.totalNights++;
+    public void increaseTotalNights(int n){
+        this.totalNights += n;
     }
 
     /**

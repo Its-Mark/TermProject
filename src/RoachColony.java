@@ -38,7 +38,7 @@ public class RoachColony {
      * @return
      */
     public double getGrowthRate() {
-        return growthRate;
+        return this.growthRate;
     }
 
     /**
@@ -46,6 +46,11 @@ public class RoachColony {
      * @return
      */
     public int getPopulation() {
-        return population;
+        return this.population;
     }
+
+	public void party() {
+		
+		
+	}
 }
