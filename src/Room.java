@@ -3,6 +3,10 @@ public abstract class Room {
     protected int totalNights;
     protected String description;
 
+    public String getDescription() {
+    	return description;
+    }
+    
     /**
      * Getter Method for number of nights
      * @return
