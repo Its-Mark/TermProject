@@ -16,6 +16,6 @@ public class RoachPalStrategy implements PaymentStrategy {
 
 	@Override
 	public String sayPS() {
-		return null;
+		return "RoachPal";
 	}
 }

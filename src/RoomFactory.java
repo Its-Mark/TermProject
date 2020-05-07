@@ -31,6 +31,8 @@ public class RoomFactory {
 				room = new FoodBar(room);
 			else if(a.compareToIgnoreCase("shower") == 0)
 				room = new SResistShower(room);
+			else if(a.compareToIgnoreCase("auto refill food bar") == 0)
+				room = new AutoRefillFB(room);
 		}
 
 		return room;

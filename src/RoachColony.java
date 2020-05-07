@@ -49,6 +49,10 @@ public class RoachColony {
         return this.population;
     }
 
+    public void setPopulation(int p){
+        this.population = p;
+    }
+
 	
 	public String toString() {
 		return colonyName + "roach colony with a population of " + population + " and a growth rate of " + growthRate;

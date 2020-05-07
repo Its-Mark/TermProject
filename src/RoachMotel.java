@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+
 public class RoachMotel {
     private static RoachMotel instance = new RoachMotel();
     private final int NUM_ROOMS = 10;
@@ -21,6 +22,10 @@ public class RoachMotel {
      */
     public static RoachMotel getInstance(){
        return instance;
+    }
+
+    public Room getRoom(int i){
+        return rooms.get(i);
     }
 
     /**
@@ -78,13 +83,39 @@ public class RoachMotel {
 
 	}
 
+    /**
+     * @return a string with all the room descriptions seperated in different lines
+     */
 	@Override
 	public String toString(){
 	    String s = "";
 	    for (Room r : rooms){
-            s += "ROOMS OCCUPIED:\n" + r.getDescription() + "\n";
+            s +=  r.getDescription() + "\n";
         }
 	    return s;
+    }
+
+    /**
+     * Throws a party for a certain room.
+     * Kills a % of roaches depending if they have the spray resistant shower or not
+     * @param rmNum number
+     */
+    public void throwParty(int rmNum){
+        Room rm = rooms.get(rmNum);
+        RoachColony rc = rm.getRoomColony();
+        int pop = rc.getPopulation();
+        if(rm.getDescription().contains("spray-resistant shower")){
+            System.out.println(rc.getColonyName() + " has a spray-resistant shower so some lives will be spared....");
+            int change = pop - Math.floorDiv(pop,4);
+            System.out.println("Their population is now: " + change);
+            rc.setPopulation(change);
+        } else {
+            System.out.println(rc.getColonyName() +  " did not have a spray-resistant shower so rippy dippy....");
+            int change = pop - Math.floorDiv(pop,2);
+            System.out.println("Their population is now: " + change);
+            rc.setPopulation(change);
+        }
+
     }
 
 }
