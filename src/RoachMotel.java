@@ -43,7 +43,7 @@ public class RoachMotel {
             Room rm = rf.getRoom(roomType, amenities);
             rm.setRoomColony(rc);
             rooms.add(rm);
-            System.out.println(rc.getColonyName() + "just checked into a " + roomType.toUpperCase() + " room.");
+            System.out.println(rc.getColonyName() + " just checked into a " + roomType.toUpperCase() + " room.");
         }
         else {
             System.out.println("There are no available rooms... Try again next time chump.");
