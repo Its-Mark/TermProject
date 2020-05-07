@@ -31,6 +31,10 @@ public class RoachMotel {
         return rooms.size() < NUM_ROOMS;
     }
 
+    public Room checkIn(RoachColony rc, String roomType, String[] amenities){
+
+    }
+
 	public void createRooms() {
 		// TODO Auto-generated method stub
 		
@@ -40,12 +44,6 @@ public class RoachMotel {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	public Room checkIn(RoachColony rc6, String roomType, ArrayList amenities2) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 
 
 }

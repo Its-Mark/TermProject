@@ -51,6 +51,9 @@ public class RoachColony {
 
 	public void party() {
 		
-		
+	}
+	
+	public String toString() {
+		return colonyName + "roach colony with a population of " + population + " and a growth rate of " + growthRate;
 	}
 }
