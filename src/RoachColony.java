@@ -49,11 +49,17 @@ public class RoachColony {
         return this.population;
     }
 
+    /**
+     * Setter method
+     * @param p
+     */
     public void setPopulation(int p){
         this.population = p;
     }
 
-	
+    /**
+     * @return a string describing colony
+     */
 	public String toString() {
 		return colonyName + "roach colony with a population of " + population + " and a growth rate of " + growthRate;
 	}

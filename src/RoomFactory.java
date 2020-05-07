@@ -1,3 +1,6 @@
+/**
+ * Room Factory that will create Room objects
+ */
 public class RoomFactory {
 
 	public RoomFactory(){}

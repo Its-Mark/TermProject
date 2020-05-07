@@ -37,7 +37,6 @@ public abstract class Room {
      * @return
      */
     public abstract double getCost();
-
     public abstract String getDescription();
 
 }

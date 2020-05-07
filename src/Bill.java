@@ -18,6 +18,10 @@ public class Bill {
         room = r;
     }
 
+    /**
+     * Pays the bill for the room
+     * @param ps
+     */
     public void payBill(PaymentStrategy ps){
         double total = room.getCost() * room.getTotalNights();
         ps.pay(total);
