@@ -13,11 +13,11 @@ public class TestMotel {
 
 		RoachMotel rm = RoachMotel.getInstance();
 		String[] rm1a = {"Spa", "FoodBar"};
-		PaymentStrategy ps1 = new MRCardStrategy("Ben Dover", "1234-5678-9101", "123", "10/12/25");
+		PaymentStrategy ps1 = new MRCardStrategy("John Johnson", "1234-5678-9101", "123", "10/12/25");
 		PaymentStrategy ps2 = new RoachPalStrategy("eastSideRoach64920@roachinc.com", "password");
 		String[] rm2a = {"Spa", "Shower", "FoodBar","AUTO REFILL FOOD BAR"};
-		RoachColony rc1 = new RoachColony("Dem Roaches", 20, 2.5);
-		RoachColony rc2 = new RoachColony("East Side Roach", 15, 3.7);
+		RoachColony rc1 = new RoachColony("Dem Roaches", 1000, .5);
+		RoachColony rc2 = new RoachColony("East Side Roach", 200, .7);
 		RoachColony rc3 = new RoachColony("Roaches", 14, 1.0);
 		RoachColony rc4 = new RoachColony("west side roaches", 125, .9);
 		RoachColony rc5 = new RoachColony("Secret techs", 1125, .7);
@@ -41,7 +41,7 @@ public class TestMotel {
 		//NEXT ONE SHOULDN'T WORK B/C MOTEL CAPACITY
 		rm.checkIn(rc11, "SuiTE", rm2a);
 
-		System.out.println("INCREASING NIGHTS BY 10");
+		System.out.println("INCREASING NIGHTS BY 11");
 		for (int i = 0; i <= 10; i++) {
 			rm.increaseNight();
 		}

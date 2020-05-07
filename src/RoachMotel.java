@@ -110,14 +110,17 @@ public class RoachMotel {
         Room rm = rooms.get(rmNum);
         RoachColony rc = rm.getRoomColony();
         int pop = rc.getPopulation();
+        double gc = rc.getGrowthRate();
+        double temp = pop * gc + pop;
+        int grow = (int)Math.round((pop + Math.ceil(temp)));
         if(rm.getDescription().contains("spray-resistant shower")){
-            System.out.println(rc.getColonyName() + " has a spray-resistant shower so some lives will be spared....");
-            int change = pop - Math.floorDiv(pop,4);
+            System.out.println(rc.getColonyName() + "(" + pop + ") has a spray-resistant shower so some lives will be spared....");
+            int change = grow - Math.floorDiv(grow,4);
             System.out.println("Their population is now: " + change);
             rc.setPopulation(change);
         } else {
-            System.out.println(rc.getColonyName() +  " did not have a spray-resistant shower so rippy dippy....");
-            int change = pop - Math.floorDiv(pop,2);
+            System.out.println(rc.getColonyName() + "(" + pop +  " did not have a spray-resistant shower so....");
+            int change = grow - Math.floorDiv(grow,2);
             System.out.println("Their population is now: " + change);
             rc.setPopulation(change);
         }
