@@ -12,8 +12,13 @@ public class MRCardStrategy implements PaymentStrategy {
 		this.cvv = cvv;
 		this.dateOfExpiry = dateOfExpiry;
 	}
-	
-	public void pay(int payment) {
+	@Override
+	public String sayPS(){
+		return "Master Roach Card";
+	}
+
+	@Override
+	public void pay(double payment) {
 		System.out.println("Amount paid with Master Roach credit card: $" + payment + ".");
 	}
 }

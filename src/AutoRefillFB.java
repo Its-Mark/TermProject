@@ -1,18 +1,19 @@
 public class AutoRefillFB extends RoomDecorator {
 	protected Room type; 
 
-	public static final int COST = 5;
+	public static final double COST = 5.0;
 
-	public AutoRefillFB(Room type) {
-		this.type = type;
-	}
- 
-	public String getDescription() {
-		return type.getDescription() + " with an auto refill of the food bar";
+	public AutoRefillFB(Room t) {
+		this.type = t;
 	}
 
 	@Override
-	public int getCost() {
+	public String getDescription() {
+		return this.type.getDescription() + " with an auto refill of the food bar";
+	}
+
+	@Override
+	public double getCost() {
 		return type.getCost() + COST;
 	}
 }

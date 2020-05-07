@@ -1,18 +1,20 @@
 public class FoodBar extends RoomDecorator {
 	protected Room type; 
 
-	public static final int COST = 10;
+	public static final double COST = 10.0;
 
-	public FoodBar(Room type) {
-		this.type = type;
+	public FoodBar(Room t) {
+		this.type = t;
  }
- 
+
+ 	@Override
 	public String getDescription() {
-		return type.getDescription() + " with a food bar";
+		return this.type.getDescription() + " with a food bar";
 	}
 
+
 	@Override
-	public int getCost() {
+	public double getCost() {
 		return type.getCost() + COST;
 	}
 }

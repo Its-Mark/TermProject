@@ -1,3 +1,4 @@
 public interface PaymentStrategy {
-	public void pay(int amount);	
+	public void pay(double amount);
+	public String sayPS();
 }

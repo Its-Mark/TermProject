@@ -3,10 +3,6 @@ public abstract class Room {
     protected int totalNights;
     protected String description;
 
-    public String getDescription() {
-    	return description;
-    }
-    
     /**
      * Getter Method for number of nights
      * @return
@@ -18,8 +14,8 @@ public abstract class Room {
     /**
      * Setter Method to increase nights stayed by "n"
      */
-    public void increaseTotalNights(int n){
-        this.totalNights += n;
+    public void increaseTotalNights(){
+        this.totalNights ++;
     }
 
     /**
@@ -31,8 +27,17 @@ public abstract class Room {
     }
 
     /**
-     * Abstract method to get the cost depending on the room
+     * @return the roach colony that is in the room.
+     */
+    public RoachColony getRoomColony(){
+        return this.roomColony;
+    }
+    /**
+     * Abstract methods depending on the rooms.
      * @return
      */
-    public abstract int getCost();
+    public abstract double getCost();
+
+    public abstract String getDescription();
+
 }

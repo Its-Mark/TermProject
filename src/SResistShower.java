@@ -1,18 +1,19 @@
 public class SResistShower extends RoomDecorator {
 	protected Room type; 
 
-	public static final int COST = 25;
+	public static final double COST = 25.0;
 
-	public SResistShower(Room type) {
-		this.type = type;
-	}
- 
-	public String getDescription() {
-		return type.getDescription() + " with a spray-resistant shower";
+	public SResistShower(Room t) {
+		this.type = t;
 	}
 
 	@Override
-	public int getCost() {
+	public String getDescription() {
+		return this.type.getDescription() + " with a spray-resistant shower";
+	}
+
+	@Override
+	public double getCost() {
 		return type.getCost() + COST;
 	}
 }

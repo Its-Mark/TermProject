@@ -1,12 +1,18 @@
 public class Suite extends Room {
- private static final int COST = 100;
+ private static final double COST = 100.00;
  
  public Suite() {
   description = "Suite";
  }
 
  @Override
- public int getCost() {
+ public double getCost() {
   return COST;
  }
+
+ @Override
+ public String getDescription() {
+  return description;
+ }
+
 }
