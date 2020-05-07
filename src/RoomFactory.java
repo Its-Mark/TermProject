@@ -17,11 +17,11 @@ public class RoomFactory {
 
 	public Room getRoom(String type, String[] ameneites){
 		Room room = null;
-		if (type.equals("Regular"))
+		if (type.compareToIgnoreCase("Regular") == 0)
 			room = new Regular();
-		else if (type.equals("Deluxe"))
+		else if (type.compareToIgnoreCase("Deluxe") == 0)
 			room = new Deluxe();
-		else if (type.equals("Suite"))
+		else if (type.compareToIgnoreCase("Suite") == 0)
 			room = new Suite();
 
 		for(String a : ameneites){

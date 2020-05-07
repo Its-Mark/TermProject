@@ -6,7 +6,9 @@ public class Bill {
     /**
      * Default constructor never used because there is no "default bill"
      */
-    public Bill(){}
+    public Bill(){
+        room = null;
+    }
 
     /**
      * Constructor for the bill for Room r;
